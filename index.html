@@ -254,22 +254,20 @@ nav{
 
 <div class="gallery">
 
-<div class="gallery-item" onclick="toggleBubble(this)">
-<img src="./images/tamiya-neo-fighter-dt-03-kit-58587.jpg" onclick="openLightbox(this.src);event.stopPropagation();">
-<div class="speech-bubble">
-Unser Standardauto, mit dem wir gerne kleine Wettrennen austragen.
-Da alle Autos gleich schnell sind, entscheidet hier dein eigenes Geschick.
-</div>
-</div>
+  <div class="gallery-item" onclick="toggleBubble(this)">
+    <img src="./images/tamiya-neo-fighter-dt-03-kit-58587.jpg" 
+         onclick="openLightbox(this.src);">
+    <div class="speech-bubble">
+      Unser Standardauto, mit dem wir gerne kleine Wettrennen austragen.
+      Da alle Autos gleich schnell sind, entscheidet hier dein eigenes Geschick.
+    </div>
+  </div>
 
-<div class="gallery-item" onclick="toggleBubble(this)">
-<img src="./images/Arrma-Quake.jpg" onclick="openLightbox(this.src);event.stopPropagation();">
-<div class="speech-bubble">
-Extreme Power für spektakuläre Sprünge.
-</div>
-</div>
+  <div class="gallery-item" onclick="toggleBubble(this)">
+    <img src="./images/Arrma-Quake.jpg" onclick="openLightbox(this.src);">
+    <div class="speech-bubble">Extreme Power für spektakuläre Sprünge.</div>
+  </div>
 
-</div>
 </div>
 
 <div id="lastUpdate">Letzte Änderung: Lade…</div>
@@ -290,9 +288,14 @@ function toggleDarkMode(){
 
 // Speech
 function toggleBubble(el){
-  document.querySelectorAll('.gallery-item').forEach(i=>{
-    if(i!==el) i.classList.remove("active");
+  // alle anderen schließen
+  document.querySelectorAll('.gallery-item').forEach(item=>{
+    if(item!==el){
+      item.classList.remove("active");
+    }
   });
+
+  // toggle für aktuelles
   el.classList.toggle("active");
 }
 
