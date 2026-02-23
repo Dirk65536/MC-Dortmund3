@@ -3,62 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meine Termin-Liste</title>
-<style>
-  body { font-family: Arial, sans-serif; margin: 2rem; background: #f9f9f9; }
-  h1 { color: #333; }
-  ul { list-style-type: none; padding: 0; }
-  li { background: #fff; margin: 0.5rem 0; padding: 1rem; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-  img, video { max-width: 200px; display: block; margin-top: 0.5rem; }
+<title>MC Dortmund – Termine</title>
 
-  .fullwidth 
-  {
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  margin: 2rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: white;
+  margin: 0.6rem 0;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: 1rem;
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.gallery img {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ===== FOOTER ===== */
+#lastUpdate {
+  margin: 2rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ========================================= */
+/* ===== MOBILE OPTIMIERUNG ===== */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+  .hero-text {
+    bottom: 15px;
+    left: 15px;
+    padding: 12px 18px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .content {
+    margin: 1rem;
+  }
+
+  li {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery img {
     width: 100%;
-    height: auto;
-    display: block;
-  }  
+  }
+
+  #lastUpdate {
+    margin: 1rem;
+    font-size: 0.8rem;
+  }
+}
 </style>
 </head>
+
 <body>
 
+<!-- HERO BANNER -->
+<div class="hero">
+  <img src="./images/Offroadstrecke1.png" alt="Offroadstrecke">
+  <div class="hero-text">
+    <h1>MC Dortmund</h1>
+    <div>Offroad • Training • Events</div>
+  </div>
+</div>
 
-  <h1>Termine</h1> 
-  
+<div class="content">
+
+<h2>Termine</h2>
+
 <ul>
-  
-<li>So, 13.02.26 Freies Training in der Halle
-</li>
-<li>Sa, 01.03.26 XXX_Cup
-</li> 
-<li>So, 02.03.36 Streckepflege Outdoor-Bahn
-</li>
-<li>Mi, 15.03.26 Jahreshauptversammlung
-</li>
-
+  <li>So, 13.02.26 – Freies Training in der Halle</li>
+  <li>Sa, 01.03.26 – XXX_Cup</li>
+  <li>So, 02.03.36 – Streckepflege Outdoor-Bahn</li>
+  <li>Mi, 15.03.26 – Jahreshauptversammlung</li>
 </ul>
 
-<div>
-  <img src="./images/Offroadstrecke1.png" alt="Offroadstrecke"  class="fullwidth">
+<div class="gallery">
   <img src="./images/arrma-mojave.jpg" alt="Arrma Mojave">
   <img src="./images/TT01-Mercedes.jpg" alt="Tamiya Mercedes">
 </div>
 
-  
-<div id="lastUpdate" style="margin-top:1.5rem; font-size:0.9rem; color:#555;">
+</div>
+
+<div id="lastUpdate">
   Letzte Änderung: Lade…
 </div>
 
-
-
-
-  
 <script>
 // GitHub-Konfiguration
-const owner = "Dirk65536"; // GitHub-Benutzername
-const repo = "MC-Dortmund3"; // Repository-Name
-const filePath = "index.html"; // Pfad zur Datei
+const owner = "Dirk65536";
+const repo = "MC-Dortmund3";
+const filePath = "index.html";
 
-// Letzte Änderung über GitHub API abrufen
+// Letzte Änderung abrufen
 fetch(`https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}&page=1&per_page=1`)
   .then(res => res.json())
   .then(data => {
@@ -70,12 +174,11 @@ fetch(`https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}&pa
       document.getElementById('lastUpdate').innerText = "Letzte Änderung: unbekannt";
     }
   })
-  .catch(err => {
-    console.error(err);
-    document.getElementById('lastUpdate').innerText = "Letzte Änderung: Fehler beim Laden";
+  .catch(() => {
+    document.getElementById('lastUpdate').innerText =
+      "Letzte Änderung: Fehler beim Laden";
   });
 </script>
-  
+
 </body>
-  
 </html>
