@@ -12,17 +12,32 @@ body {
   background: #f4f4f4;
 }
 
+/* ===== STICKY NAV ===== */
+nav {
+  position: sticky;
+  top: 0;
+  background: #111;
+  color: white;
+  padding: 12px 30px;
+  z-index: 1000;
+  font-weight: bold;
+}
+
 /* ===== HERO ===== */
 .hero {
   position: relative;
-  width: 100%;
   overflow: hidden;
 }
 
 .hero img {
   width: 100%;
-  height: auto;
   display: block;
+  animation: zoomHero 20s ease-in-out infinite alternate;
+}
+
+@keyframes zoomHero {
+  from { transform: scale(1); }
+  to   { transform: scale(1.08); }
 }
 
 .hero-text {
@@ -35,28 +50,61 @@ body {
   border-radius: 10px;
 }
 
-.hero-text h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
 /* ===== CONTENT ===== */
 .content {
   margin: 2rem;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+.section-title {
+  margin-bottom: 1rem;
 }
 
-li {
+/* ===== TERMINKARTEN ===== */
+.event-card {
+  display: flex;
+  align-items: center;
   background: white;
-  margin: 0.6rem 0;
-  padding: 1.2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  font-size: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.event-date {
+  background: #d40000;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  min-width: 90px;
+  font-weight: bold;
+}
+
+.event-date .day {
+  font-size: 1.5rem;
+}
+
+.event-date .month {
+  font-size: 0.9rem;
+}
+
+.event-info {
+  padding: 15px 20px;
+  flex: 1;
+}
+
+.calendar-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 12px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.calendar-btn:hover {
+  background: #333;
 }
 
 /* ===== GALLERY ===== */
@@ -70,40 +118,42 @@ li {
 .gallery img {
   width: 250px;
   max-width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
 }
 
 /* ===== FOOTER ===== */
 #lastUpdate {
   margin: 2rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #555;
 }
 
-/* ========================================= */
-/* ===== MOBILE OPTIMIERUNG ===== */
-/* ========================================= */
-
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
   .hero-text {
-    bottom: 15px;
     left: 15px;
+    bottom: 15px;
     padding: 12px 18px;
-  }
-
-  .hero-text h1 {
-    font-size: 1.4rem;
   }
 
   .content {
     margin: 1rem;
   }
 
-  li {
-    font-size: 0.95rem;
-    padding: 1rem;
+  .event-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .event-date {
+    text-align: center;
   }
 
   .gallery {
@@ -114,18 +164,15 @@ li {
   .gallery img {
     width: 100%;
   }
-
-  #lastUpdate {
-    margin: 1rem;
-    font-size: 0.8rem;
-  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO BANNER -->
+<nav>MC Dortmund</nav>
+
+<!-- HERO -->
 <div class="hero">
   <img src="./images/Offroadstrecke1.png" alt="Offroadstrecke">
   <div class="hero-text">
@@ -136,37 +183,60 @@ li {
 
 <div class="content">
 
-<h2>Termine</h2>
+<h2 class="section-title">Termine</h2>
 
-<ul>
-  <li>So, 13.02.26 – Freies Training in der Halle</li>
-  <li>Sa, 01.03.26 – XXX_Cup</li>
-  <li>So, 02.03.36 – Streckepflege Outdoor-Bahn</li>
-  <li>Mi, 15.03.26 – Jahreshauptversammlung</li>
-</ul>
+<!-- EVENT 1 -->
+<div class="event-card">
+  <div class="event-date">
+    <div class="day">13</div>
+    <div class="month">FEB 26</div>
+  </div>
+  <div class="event-info">
+    Freies Training in der Halle
+    <br>
+    <a class="calendar-btn"
+       href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Freies+Training&dates=20260213T180000/20260213T210000">
+       ➕ Add to Calendar
+    </a>
+  </div>
+</div>
+
+<!-- EVENT 2 -->
+<div class="event-card">
+  <div class="event-date">
+    <div class="day">01</div>
+    <div class="month">MAR 26</div>
+  </div>
+  <div class="event-info">
+    XXX Cup
+    <br>
+    <a class="calendar-btn"
+       href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=XXX+Cup&dates=20260301T090000/20260301T170000">
+       ➕ Add to Calendar
+    </a>
+  </div>
+</div>
+
+<h2 class="section-title">Galerie</h2>
 
 <div class="gallery">
-  <img src="./images/arrma-fury-mega-550-2wd-1-10-green.jpg" alt="Arrma Fury">
-  <img src="./images/TT01-Mercedes.jpg" alt="Tamiya Mercedes">
-  <img src="./images/Tamiya-WildWilly.jpg" alt="Tamiya Wild Willy">
-  <img src="./images/Traxxas-Rustler-4x4.jpg" alt="Traxxas Rustler 4x4">
-  <img src="./images/tamiya-neo-fighter-dt-03-kit-58587.jpg" alt="Tamiya DT-03 Neo Fighter">
-  <img src="./images/Arrma-Quake.jpg" alt="Arrma Quake">
+  <img src="./images/arrma-fury-mega-550-2wd-1-10-green.jpg">
+  <img src="./images/TT01-Mercedes.jpg">
+  <img src="./images/Tamiya-WildWilly.jpg">
+  <img src="./images/Traxxas-Rustler-4x4.jpg">
+  <img src="./images/tamiya-neo-fighter-dt-03-kit-58587.jpg">
+  <img src="./images/Arrma-Quake.jpg">
 </div>
 
 </div>
 
-<div id="lastUpdate">
-  Letzte Änderung: Lade…
-</div>
+<div id="lastUpdate">Letzte Änderung: Lade…</div>
 
 <script>
-// GitHub-Konfiguration
 const owner = "Dirk65536";
 const repo = "MC-Dortmund3";
 const filePath = "index.html";
 
-// Letzte Änderung abrufen
 fetch(`https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}&page=1&per_page=1`)
   .then(res => res.json())
   .then(data => {
@@ -174,8 +244,6 @@ fetch(`https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}&pa
       const date = new Date(data[0].commit.committer.date);
       document.getElementById('lastUpdate').innerText =
         "Letzte Änderung: " + date.toLocaleString();
-    } else {
-      document.getElementById('lastUpdate').innerText = "Letzte Änderung: unbekannt";
     }
   })
   .catch(() => {
