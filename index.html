@@ -1,1 +1,350 @@
-PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImRlIj4KPGhlYWQ+CjxtZXRhIGNoYXJzZXQ9IlVURi04Ij4KPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xLjAiPgo8dGl0bGU+TUMgRG9ydG11bmQg4oCTIFRlcm1pbmU8L3RpdGxlPgoKPHN0eWxlPgo6cm9vdHsKICAtLWJnOiNmNGY0ZjQ7CiAgLS10ZXh0OiMxMTE7CiAgLS1jYXJkOiNmZmZmZmY7CiAgLS1hY2NlbnQ6I2Q0MDAwMDsKfQoKYm9keS5kYXJrewogIC0tYmc6IzEyMTIxMjsKICAtLXRleHQ6I2YwZjBmMDsKICAtLWNhcmQ6IzFlMWUxZTsKICAtLWFjY2VudDojZmYzYjNiOwp9Cgpib2R5ewogIG1hcmdpbjowOwogIGZvbnQtZmFtaWx5OkFyaWFsLCBzYW5zLXNlcmlmOwogIGJhY2tncm91bmQ6dmFyKC0tYmcpOwogIGNvbG9yOnZhcigtLXRleHQpOwogIG92ZXJmbG93LXg6aGlkZGVuOwogIHRyYW5zaXRpb246MC4zczsKfQoKLyogTkFWICovCm5hdnsKICBwb3NpdGlvbjpzdGlja3k7CiAgdG9wOjA7CiAgYmFja2dyb3VuZDojMTExOwogIGNvbG9yOndoaXRlOwogIHBhZGRpbmc6MTJweCAyMHB4OwogIGRpc3BsYXk6ZmxleDsKICBqdXN0aWZ5LWNvbnRlbnQ6c3BhY2UtYmV0d2VlbjsKICBhbGlnbi1pdGVtczpjZW50ZXI7CiAgei1pbmRleDoxMDAwOwp9CgovKiBIRVJPICovCi5oZXJvewogIHBvc2l0aW9uOnJlbGF0aXZlOwogIG92ZXJmbG93OmhpZGRlbjsKfQoKLmhlcm8gaW1newogIHdpZHRoOjEwMCU7CiAgYW5pbWF0aW9uOnpvb21IZXJvIDE4cyBlYXNlLWluLW91dCBpbmZpbml0ZSBhbHRlcm5hdGU7Cn0KCkBrZXlmcmFtZXMgem9vbUhlcm97CiAgZnJvbXt0cmFuc2Zvcm06c2NhbGUoMSk7fQogIHRve3RyYW5zZm9ybTpzY2FsZSgxLjA4KTt9Cn0KCi5oZXJvLXRleHR7CiAgcG9zaXRpb246YWJzb2x1dGU7CiAgYm90dG9tOjMwcHg7CiAgbGVmdDo0MHB4OwogIGJhY2tncm91bmQ6cmdiYSgwLDAsMCwwLjYpOwogIGNvbG9yOndoaXRlOwogIHBhZGRpbmc6MjBweCAzMHB4OwogIGJvcmRlci1yYWRpdXM6MTBweDsKfQoKLyogQ09OVEVOVCAqLwouY29udGVudHsKICBtYXJnaW46MnJlbTsKfQoKLyogQ09VTlRET1dOICovCi5jb3VudGRvd257CiAgZm9udC1zaXplOjEuMnJlbTsKICBtYXJnaW4tYm90dG9tOjEuNXJlbTsKICBmb250LXdlaWdodDpib2xkOwp9CgovKiBFVkVOVCBDQVJEICovCi5ldmVudC1jYXJkewogIGRpc3BsYXk6ZmxleDsKICBiYWNrZ3JvdW5kOnZhcigtLWNhcmQpOwogIG1hcmdpbi1ib3R0b206MXJlbTsKICBib3JkZXItcmFkaXVzOjEycHg7CiAgYm94LXNoYWRvdzowIDRweCAxMnB4IHJnYmEoMCwwLDAsMC4xNSk7CiAgb3ZlcmZsb3c6aGlkZGVuOwp9CgouZXZlbnQtZGF0ZXsKICBiYWNrZ3JvdW5kOnZhcigtLWFjY2VudCk7CiAgY29sb3I6d2hpdGU7CiAgcGFkZGluZzoyMHB4OwogIG1pbi13aWR0aDo5MHB4OwogIHRleHQtYWxpZ246Y2VudGVyOwogIGZvbnQtd2VpZ2h0OmJvbGQ7Cn0KCi5ldmVudC1pbmZvewogIHBhZGRpbmc6MTVweCAyMHB4OwogIGZsZXg6MTsKfQoKLmNhbGVuZGFyLWJ0bnsKICBkaXNwbGF5OmlubGluZS1ibG9jazsKICBtYXJnaW4tdG9wOjhweDsKICBwYWRkaW5nOjZweCAxMnB4OwogIGJhY2tncm91bmQ6IzExMTsKICBjb2xvcjp3aGl0ZTsKICB0ZXh0LWRlY29yYXRpb246bm9uZTsKICBib3JkZXItcmFkaXVzOjZweDsKICBmb250LXNpemU6MC44cmVtOwp9CgouY2FsZW5kYXItYnRuOmhvdmVyewogIGJhY2tncm91bmQ6IzMzMzsKfQoKLyogR0FMTEVSWSAqLwouZ2FsbGVyeXsKICBtYXJnaW4tdG9wOjJyZW07CiAgZGlzcGxheTpmbGV4OwogIGZsZXgtd3JhcDp3cmFwOwogIGdhcDoxNXB4Owp9CgouZ2FsbGVyeS1pdGVtewogIGN1cnNvcjpwb2ludGVyOwp9CgouZ2FsbGVyeSBpbWd7CiAgd2lkdGg6MjUwcHg7CiAgYm9yZGVyLXJhZGl1czoxMnB4OwogIGJveC1zaGFkb3c6MCA0cHggMTBweCByZ2JhKDAsMCwwLDAuMyk7CiAgdHJhbnNpdGlvbjowLjNzOwp9CgouZ2FsbGVyeSBpbWc6aG92ZXJ7CiAgdHJhbnNmb3JtOnNjYWxlKDEuMDUpOwp9CgovKiBMSUdIVEJPWCAqLwoubGlnaHRib3h7CiAgcG9zaXRpb246Zml4ZWQ7CiAgdG9wOjA7CiAgbGVmdDowOwogIHdpZHRoOjEwMCU7CiAgaGVpZ2h0OjEwMCU7CiAgYmFja2dyb3VuZDpyZ2JhKDAsMCwwLDAuODUpOwogIGRpc3BsYXk6bm9uZTsKICBqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyOwogIGFsaWduLWl0ZW1zOmNlbnRlcjsKICB6LWluZGV4OjIwMDA7Cn0KCi5saWdodGJveCBpbWd7CiAgbWF4LXdpZHRoOjkwJTsKICBtYXgtaGVpZ2h0OjkwJTsKICBib3JkZXItcmFkaXVzOjEwcHg7Cn0KCi8qIEZPT1RFUiAqLwojbGFzdFVwZGF0ZXsKICBtYXJnaW46MnJlbTsKICBmb250LXNpemU6MC44cmVtOwp9CgovKiBNT0JJTEUgKi8KQG1lZGlhKG1heC13aWR0aDo3NjhweCl7CiAgLmhlcm8tdGV4dHsKICAgIGxlZnQ6MTVweDsKICAgIGJvdHRvbToxNXB4OwogICAgcGFkZGluZzoxMnB4IDE4cHg7CiAgfQoKICAuY29udGVudHsKICAgIG1hcmdpbjoxcmVtOwogIH0KCiAgLmV2ZW50LWNhcmR7CiAgICBmbGV4LWRpcmVjdGlvbjpjb2x1bW47CiAgfQoKICAuZ2FsbGVyeXsKICAgIGZsZXgtZGlyZWN0aW9uOmNvbHVtbjsKICAgIGFsaWduLWl0ZW1zOmNlbnRlcjsKICB9CgogIC5nYWxsZXJ5IGltZ3sKICAgIHdpZHRoOjEwMCU7CiAgfQp9Cjwvc3R5bGU+CjwvaGVhZD4KCjxib2R5PgoKPG5hdj4KICA8ZGl2Pk1DIERvcnRtdW5kPC9kaXY+CiAgPGJ1dHRvbiBvbmNsaWNrPSJ0b2dnbGVEYXJrTW9kZSgpIj7wn4yZIERhcmsgTW9kZTwvYnV0dG9uPgo8L25hdj4KCjxkaXYgY2xhc3M9Imhlcm8iPgogIDxpbWcgc3JjPSIuL2ltYWdlcy9PZmZyb2Fkc3RyZWNrZTEucG5nIj4KICA8ZGl2IGNsYXNzPSJoZXJvLXRleHQiPgogICAgPGgxPk1DIERvcnRtdW5kPC9oMT4KICAgIE9mZnJvYWQg4oCiIFRyYWluaW5nIOKAoiBFdmVudHMKICA8L2Rpdj4KPC9kaXY+Cgo8ZGl2IGNsYXNzPSJjb250ZW50Ij4KCjxkaXYgY2xhc3M9ImNvdW50ZG93biIgaWQ9ImNvdW50ZG93biI+PC9kaXY+Cgo8aDI+VGVybWluZTwvaDI+Cgo8ZGl2IGlkPSJsYXN0VXBkYXRlIj5MZXR6dGUgw4RuZGVydW5nOiBMYWRl4oCmPC9kaXY+CiAgCjxkaXYgaWQ9ImV2ZW50cy1jb250YWluZXIiPjxkaXYgY2xhc3M9ImV2ZW50LWNhcmQiPgogICAgPGRpdiBjbGFzcz0iZXZlbnQtZGF0ZSI+MTM8YnI+RkVCIDI2PC9kaXY+CiAgICA8ZGl2IGNsYXNzPSJldmVudC1pbmZvIj4KICAgICAgRnJlaWVzIFRyYWluaW5nIGluIGRlciBIYWxsZQogICAgICA8YnI+CiAgICAgIDxhIGNsYXNzPSJjYWxlbmRhci1idG4iIGhyZWY9Imh0dHBzOi8vY2FsZW5kYXIuZ29vZ2xlLmNvbS9jYWxlbmRhci9yZW5kZXI/YWN0aW9uPVRFTVBMQVRFJnRleHQ9RnJlaWVzK1RyYWluaW5nJmRhdGVzPTIwMjYwMjEzVDE4MDAwMC8yMDI2MDIxM1QyMTAwMDAiPuKelSBBZGQgdG8gQ2FsZW5kYXI8L2E+CiAgICA8L2Rpdj4KICA8L2Rpdj4KPGRpdiBjbGFzcz0iZXZlbnQtY2FyZCI+CiAgICA8ZGl2IGNsYXNzPSJldmVudC1kYXRlIj4wMTxicj5Nw4RSIDI2PC9kaXY+CiAgICA8ZGl2IGNsYXNzPSJldmVudC1pbmZvIj4KICAgICAgWFhYIEN1cAogICAgICA8YnI+CiAgICAgIDxhIGNsYXNzPSJjYWxlbmRhci1idG4iIGhyZWY9Imh0dHBzOi8vY2FsZW5kYXIuZ29vZ2xlLmNvbS9jYWxlbmRhci9yZW5kZXI/YWN0aW9uPVRFTVBMQVRFJnRleHQ9WFhYK0N1cCZkYXRlcz0yMDI2MDMwMVQwOTAwMDAvMjAyNjAzMDFUMTcwMDAwIj7inpUgQWRkIHRvIENhbGVuZGFyPC9hPgogICAgPC9kaXY+CiAgPC9kaXY+CjxkaXYgY2xhc3M9ImV2ZW50LWNhcmQiPgogICAgPGRpdiBjbGFzcz0iZXZlbnQtZGF0ZSI+MTU8YnI+TcOEUiAyNjwvZGl2PgogICAgPGRpdiBjbGFzcz0iZXZlbnQtaW5mbyI+CiAgICAgIFhYWCBDdXAKICAgICAgPGJyPgogICAgICA8YSBjbGFzcz0iY2FsZW5kYXItYnRuIiBocmVmPSJodHRwczovL2NhbGVuZGFyLmdvb2dsZS5jb20vY2FsZW5kYXIvcmVuZGVyP2FjdGlvbj1URU1QTEFURSZ0ZXh0PVhYWCtDdXAmZGF0ZXM9MjAyNjAzMDFUMDkwMDAwLzIwMjYwMzAxVDE3MDAwMCI+4p6VIEFkZCB0byBDYWxlbmRhcjwvYT4KICAgIDwvZGl2PgogIDwvZGl2Pgo8ZGl2IGNsYXNzPSJldmVudC1jYXJkIj4KICAgIDxkaXYgY2xhc3M9ImV2ZW50LWRhdGUiPjE1PGJyPkFQUiAyNjwvZGl2PgogICAgPGRpdiBjbGFzcz0iZXZlbnQtaW5mbyI+CiAgICAgIE5pY2h0c3R1bgogICAgICA8YnI+CiAgICAgIDxhIGNsYXNzPSJjYWxlbmRhci1idG4iIGhyZWY9Imh0dHBzOi8vY2FsZW5kYXIuZ29vZ2xlLmNvbS9jYWxlbmRhci9yZW5kZXI/YWN0aW9uPVRFTVBMQVRFJnRleHQ9WFhYK0N1cCZkYXRlcz0yMDI2MDMwMVQwOTAwMDAvMjAyNjAzMDFUMTcwMDAwIj7inpUgQWRkIHRvIENhbGVuZGFyPC9hPgogICAgPC9kaXY+CiAgPC9kaXY+CjxkaXYgY2xhc3M9ImV2ZW50LWNhcmQiPg0KICA8ZGl2IGNsYXNzPSJldmVudC1kYXRlIj4yMDxicj5NQVIgMjY8L2Rpdj4NCiAgPGRpdiBjbGFzcz0iZXZlbnQtaW5mbyI+DQogICAgTmV1ZXIgVGVybWluDQogICAgPGJyPg0KICAgIDxhIGNsYXNzPSJjYWxlbmRhci1idG4iIGhyZWY9Imh0dHBzOi8vY2FsZW5kYXIuZ29vZ2xlLmNvbS9jYWxlbmRhci9yZW5kZXI/YWN0aW9uPVRFTVBMQVRFJnRleHQ9TmV1ZXIrVGVybWluJmRhdGVzPTIwMjYwMzIwVDE4MDAwMC8yMDI2MDMyMFQyMTAwMDAiPuKelSBBZGQgdG8gQ2FsZW5kYXI8L2E+DQogIDwvZGl2Pg0KPC9kaXY+PC9kaXY+CiAgCgo8aDI+R2FsZXJpZTwvaDI+Cgo8ZGl2IGNsYXNzPSJnYWxsZXJ5Ij4KICA8ZGl2IGNsYXNzPSJnYWxsZXJ5LWl0ZW0iPgogICAgPGltZyBzcmM9Ii4vaW1hZ2VzL09mZnJvYWRzdHJlY2tlMS5wbmciIG9uY2xpY2s9Im9wZW5MaWdodGJveCh0aGlzLnNyYyk7Ij4KICA8L2Rpdj4KCiAgPGRpdiBjbGFzcz0iZ2FsbGVyeS1pdGVtIj4KICAgIDxpbWcgc3JjPSIuL2ltYWdlcy90YW1peWEtbmVvLWZpZ2h0ZXItZHQtMDMta2l0LTU4NTg3LmpwZyIgb25jbGljaz0ib3BlbkxpZ2h0Ym94KHRoaXMuc3JjKTsiPgogIDwvZGl2PgoKICA8ZGl2IGNsYXNzPSJnYWxsZXJ5LWl0ZW0iPgogICAgPGltZyBzcmM9Ii4vaW1hZ2VzL0Fycm1hLVF1YWtlLmpwZyIgb25jbGljaz0ib3BlbkxpZ2h0Ym94KHRoaXMuc3JjKTsiPgogIDwvZGl2PgoKICA8ZGl2IGNsYXNzPSJnYWxsZXJ5LWl0ZW0iPgogICAgPGltZyBzcmM9Ii4vaW1hZ2VzL2Fycm1hLWZ1cnktbWVnYS01NTAtMndkLTEtMTAtZ3JlZW4uanBnIiBvbmNsaWNrPSJvcGVuTGlnaHRib3godGhpcy5zcmMpOyI+CiAgPC9kaXY+CgogIDxkaXYgY2xhc3M9ImdhbGxlcnktaXRlbSI+CiAgICA8aW1nIHNyYz0iLi9pbWFnZXMvVFQwMS1NZXJjZWRlcy5qcGciIG9uY2xpY2s9Im9wZW5MaWdodGJveCh0aGlzLnNyYyk7Ij4KICA8L2Rpdj4KCiAgPGRpdiBjbGFzcz0iZ2FsbGVyeS1pdGVtIj4KICAgIDxpbWcgc3JjPSIuL2ltYWdlcy9UYW1peWEtV2lsZFdpbGx5LmpwZyIgb25jbGljaz0ib3BlbkxpZ2h0Ym94KHRoaXMuc3JjKTsiPgogIDwvZGl2PgoKICA8ZGl2IGNsYXNzPSJnYWxsZXJ5LWl0ZW0iPgogICAgPGltZyBzcmM9Ii4vaW1hZ2VzL1RyYXh4YXMtUnVzdGxlci00eDQuanBnIiBvbmNsaWNrPSJvcGVuTGlnaHRib3godGhpcy5zcmMpOyI+CiAgPC9kaXY+Cgo8L2Rpdj4KCjxkaXYgY2xhc3M9ImxpZ2h0Ym94IiBpZD0ibGlnaHRib3giIG9uY2xpY2s9ImNsb3NlTGlnaHRib3goKSI+CiAgPGltZyBpZD0ibGlnaHRib3hJbWciPgo8L2Rpdj4KCjxhdWRpbyBpZD0iZW5naW5lU291bmQiIHNyYz0iaHR0cHM6Ly9jZG4ucGl4YWJheS5jb20vZG93bmxvYWQvYXVkaW8vMjAyMi8wMy8xNS9hdWRpb180YjRmMDZjNDJmLm1wMz9maWxlbmFtZT1lbmdpbmUtc3RhcnQtMTAwMzEubXAzIj48L2F1ZGlvPgoKPHNjcmlwdD4KCmZ1bmN0aW9uIHRvZ2dsZURhcmtNb2RlKCl7CiAgZG9jdW1lbnQuYm9keS5jbGFzc0xpc3QudG9nZ2xlKCJkYXJrIik7Cn0KCmZ1bmN0aW9uIG9wZW5MaWdodGJveChzcmMpewogIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJsaWdodGJveEltZyIpLnNyYz1zcmM7CiAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImxpZ2h0Ym94Iikuc3R5bGUuZGlzcGxheT0iZmxleCI7Cn0KZnVuY3Rpb24gY2xvc2VMaWdodGJveCgpewogIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJsaWdodGJveCIpLnN0eWxlLmRpc3BsYXk9Im5vbmUiOwp9CgpmZXRjaChgaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS9yZXBvcy9EaXJrNjU1MzYvTUMtRG9ydG11bmQzL2NvbW1pdHM/cGF0aD1pbmRleC5odG1sJnBhZ2U9MSZwZXJfcGFnZT0xYCkKLnRoZW4ocj0+ci5qc29uKCkpCi50aGVuKGQ9PnsKICBpZihkLmxlbmd0aD4wKXsKICAgIGNvbnN0IGRhdGU9bmV3IERhdGUoZFswXS5jb21taXQuY29tbWl0dGVyLmRhdGUpOwogICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImxhc3RVcGRhdGUiKS5pbm5lclRleHQ9CiAgICAiTGV0enRlIMOEbmRlcnVuZzogIitkYXRlLnRvTG9jYWxlU3RyaW5nKCk7CiAgfQp9KTsKCmxldCBzb3VuZFBsYXllZD1mYWxzZTsKZG9jdW1lbnQuYm9keS5hZGRFdmVudExpc3RlbmVyKCJjbGljayIsZnVuY3Rpb24oKXsKICBpZighc291bmRQbGF5ZWQpewogICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImVuZ2luZVNvdW5kIikucGxheSgpOwogICAgc291bmRQbGF5ZWQ9dHJ1ZTsKICB9Cn0pOwoKY29uc3QgbmV4dEV2ZW50PW5ldyBEYXRlKCIyMDI2LTAyLTEzVDE4OjAwOjAwIik7CmZ1bmN0aW9uIHVwZGF0ZUNvdW50ZG93bigpewogIGNvbnN0IG5vdz1uZXcgRGF0ZSgpOwogIGNvbnN0IGRpZmY9bmV4dEV2ZW50LW5vdzsKICBpZihkaWZmPjApewogICAgY29uc3QgZGF5cz1NYXRoLmZsb29yKGRpZmYvKDEwMDAqNjAqNjAqMjQpKTsKICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJjb3VudGRvd24iKS5pbm5lclRleHQ9IvCfj4EgTsOkY2hzdGVzIEV2ZW50IGluICIrZGF5cysiIFRhZ2VuIjsKICB9ZWxzZXsKICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJjb3VudGRvd24iKS5pbm5lclRleHQ9IvCfj4EgRXZlbnQgbMOkdWZ0ISI7CiAgfQp9CnNldEludGVydmFsKHVwZGF0ZUNvdW50ZG93biwxMDAwKTsKdXBkYXRlQ291bnRkb3duKCk7Cgo8L3NjcmlwdD4KPC9kaXY+PC9ib2R5Pgo8L2h0bWw+Cg==
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MC Dortmund – Termine</title>
+
+<style>
+:root{
+  --bg:#f4f4f4;
+  --text:#111;
+  --card:#ffffff;
+  --accent:#d40000;
+}
+
+body.dark{
+  --bg:#121212;
+  --text:#f0f0f0;
+  --card:#1e1e1e;
+  --accent:#ff3b3b;
+}
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+  transition:0.3s;
+}
+
+/* NAV */
+nav{
+  position:sticky;
+  top:0;
+  background:#111;
+  color:white;
+  padding:12px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  overflow:hidden;
+}
+
+.hero img{
+  width:100%;
+  animation:zoomHero 18s ease-in-out infinite alternate;
+}
+
+@keyframes zoomHero{
+  from{transform:scale(1);}
+  to{transform:scale(1.08);}
+}
+
+.hero-text{
+  position:absolute;
+  bottom:30px;
+  left:40px;
+  background:rgba(0,0,0,0.6);
+  color:white;
+  padding:20px 30px;
+  border-radius:10px;
+}
+
+/* CONTENT */
+.content{
+  margin:2rem;
+}
+
+/* COUNTDOWN */
+.countdown{
+  font-size:1.2rem;
+  margin-bottom:1.5rem;
+  font-weight:bold;
+}
+
+/* EVENT CARD */
+.event-card{
+  display:flex;
+  background:var(--card);
+  margin-bottom:1rem;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  overflow:hidden;
+}
+
+.event-date{
+  background:var(--accent);
+  color:white;
+  padding:20px;
+  min-width:90px;
+  text-align:center;
+  font-weight:bold;
+}
+
+.event-info{
+  padding:15px 20px;
+  flex:1;
+}
+
+.calendar-btn{
+  display:inline-block;
+  margin-top:8px;
+  padding:6px 12px;
+  background:#111;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+  font-size:0.8rem;
+}
+
+.calendar-btn:hover{
+  background:#333;
+}
+
+/* GALLERY */
+.gallery{
+  margin-top:2rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.gallery-item{
+  cursor:pointer;
+}
+
+.gallery img{
+  width:250px;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* LIGHTBOX */
+.lightbox{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.85);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:2000;
+}
+
+.lightbox img{
+  max-width:90%;
+  max-height:90%;
+  border-radius:10px;
+}
+
+/* FOOTER */
+#lastUpdate{
+  margin:2rem;
+  font-size:0.8rem;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero-text{
+    left:15px;
+    bottom:15px;
+    padding:12px 18px;
+  }
+
+  .content{
+    margin:1rem;
+  }
+
+  .event-card{
+    flex-direction:column;
+  }
+
+  .gallery{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .gallery img{
+    width:100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div>MC Dortmund</div>
+  <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+</nav>
+
+<div class="hero">
+  <img src="./images/Offroadstrecke1.png">
+  <div class="hero-text">
+    <h1>MC Dortmund</h1>
+    Offroad • Training • Events
+  </div>
+</div>
+
+<div class="content">
+
+<div class="countdown" id="countdown"></div>
+
+<h2>Termine</h2>
+
+<div id="lastUpdate">Letzte Änderung: Lade…</div>
+  
+<div id="events-container">
+    
+  <div class="event-card">
+    <div class="event-date">13<br>FEB 26</div>
+    <div class="event-info">
+      Freies Training in der Halle
+      <br>
+      <a class="calendar-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Freies+Training&dates=20260213T180000/20260213T210000">➕ Add to Calendar</a>
+    </div>
+  </div>
+  
+  <div class="event-card">
+    <div class="event-date">01<br>MÄR 26</div>
+    <div class="event-info">
+      XXX Cup
+      <br>
+      <a class="calendar-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=XXX+Cup&dates=20260301T090000/20260301T170000">➕ Add to Calendar</a>
+    </div>
+  </div>
+  
+  <div class="event-card">
+    <div class="event-date">15<br>MÄR 26</div>
+    <div class="event-info">
+      XXX Cup
+      <br>
+      <a class="calendar-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=XXX+Cup&dates=20260301T090000/20260301T170000">➕ Add to Calendar</a>
+    </div>
+  </div>
+  
+  <div class="event-card">
+    <div class="event-date">15<br>APR 26</div>
+    <div class="event-info">
+      Nichtstun
+      <br>
+      <a class="calendar-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=XXX+Cup&dates=20260301T090000/20260301T170000">➕ Add to Calendar</a>
+    </div>
+  </div>
+
+</div>
+  
+
+<h2>Galerie</h2>
+
+<div class="gallery">
+  <div class="gallery-item">
+    <img src="./images/Offroadstrecke1.png" onclick="openLightbox(this.src);">
+  </div>
+
+  <div class="gallery-item">
+    <img src="./images/tamiya-neo-fighter-dt-03-kit-58587.jpg" onclick="openLightbox(this.src);">
+  </div>
+
+  <div class="gallery-item">
+    <img src="./images/Arrma-Quake.jpg" onclick="openLightbox(this.src);">
+  </div>
+
+  <div class="gallery-item">
+    <img src="./images/arrma-fury-mega-550-2wd-1-10-green.jpg" onclick="openLightbox(this.src);">
+  </div>
+
+  <div class="gallery-item">
+    <img src="./images/TT01-Mercedes.jpg" onclick="openLightbox(this.src);">
+  </div>
+
+  <div class="gallery-item">
+    <img src="./images/Tamiya-WildWilly.jpg" onclick="openLightbox(this.src);">
+  </div>
+
+  <div class="gallery-item">
+    <img src="./images/Traxxas-Rustler-4x4.jpg" onclick="openLightbox(this.src);">
+  </div>
+
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightboxImg">
+</div>
+
+<audio id="engineSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_4b4f06c42f.mp3?filename=engine-start-10031.mp3"></audio>
+
+<script>
+
+function toggleDarkMode(){
+  document.body.classList.toggle("dark");
+}
+
+function openLightbox(src){
+  document.getElementById("lightboxImg").src=src;
+  document.getElementById("lightbox").style.display="flex";
+}
+function closeLightbox(){
+  document.getElementById("lightbox").style.display="none";
+}
+
+fetch(`https://api.github.com/repos/Dirk65536/MC-Dortmund3/commits?path=index.html&page=1&per_page=1`)
+.then(r=>r.json())
+.then(d=>{
+  if(d.length>0){
+    const date=new Date(d[0].commit.committer.date);
+    document.getElementById("lastUpdate").innerText=
+    "Letzte Änderung: "+date.toLocaleString();
+  }
+});
+
+let soundPlayed=false;
+document.body.addEventListener("click",function(){
+  if(!soundPlayed){
+    document.getElementById("engineSound").play();
+    soundPlayed=true;
+  }
+});
+
+const nextEvent=new Date("2026-02-13T18:00:00");
+function updateCountdown(){
+  const now=new Date();
+  const diff=nextEvent-now;
+  if(diff>0){
+    const days=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("countdown").innerText="🏁 Nächstes Event in "+days+" Tagen";
+  }else{
+    document.getElementById("countdown").innerText="🏁 Event läuft!";
+  }
+}
+setInterval(updateCountdown,1000);
+updateCountdown();
+
+</script>
+</body>
+</html>
