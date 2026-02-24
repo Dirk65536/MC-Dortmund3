@@ -128,7 +128,6 @@ nav{
 }
 
 .gallery-item{
-  position:relative;
   cursor:pointer;
 }
 
@@ -141,26 +140,6 @@ nav{
 
 .gallery img:hover{
   transform:scale(1.05);
-}
-
-/* SPEECH BUBBLE */
-.speech-bubble{
-  position:absolute;
-  bottom:110%;
-  left:50%;
-  transform:translateX(-50%);
-  background:var(--card);
-  padding:12px;
-  width:230px;
-  border-radius:12px;
-  box-shadow:0 6px 20px rgba(0,0,0,0.3);
-  display:none;
-  font-size:0.85rem;
-  z-index:10;
-}
-
-.gallery-item.active .speech-bubble{
-  display:block;
 }
 
 /* LIGHTBOX */
@@ -187,26 +166,6 @@ nav{
 #lastUpdate{
   margin:2rem;
   font-size:0.8rem;
-}
-
-/* PARTICLES */
-.particle{
-  position:fixed;
-  width:6px;
-  height:6px;
-  background:#c2b280;
-  border-radius:50%;
-  pointer-events:none;
-  opacity:0.8;
-  z-index:999;
-  animation:fadeOut 1.2s forwards;
-}
-
-@keyframes fadeOut{
-  to{
-    transform:translateY(-40px);
-    opacity:0;
-  }
 }
 
 /* MOBILE */
@@ -294,79 +253,43 @@ nav{
   </div>
 </div>
 
-  
-
-
 <div id="lastUpdate">Letzte Änderung: Lade…</div>
 
-
-
-  
 <h2>Galerie</h2>
 
 <div class="gallery">
-
-  <div class="gallery-item" onclick="toggleBubble(this)">
+  <div class="gallery-item">
     <img src="./images/Offroadstrecke1.png" onclick="openLightbox(this.src);">
-    <div class="speech-bubble">
-      Unsere Outdoor-Strecke – hier trainieren wir alles.
-    </div>
   </div>
 
-  
-  <div class="gallery-item" onclick="toggleBubble(this)">
+  <div class="gallery-item">
     <img src="./images/tamiya-neo-fighter-dt-03-kit-58587.jpg" onclick="openLightbox(this.src);">
-    <div class="speech-bubble">
-      Unser Standardauto, mit dem wir gerne kleine Wettrennen austragen.
-      Da alle Autos gleich schnell sind, entscheidet hier dein eigenes Geschick.
-    </div>
   </div>
 
-  <div class="gallery-item" onclick="toggleBubble(this)">
+  <div class="gallery-item">
     <img src="./images/Arrma-Quake.jpg" onclick="openLightbox(this.src);">
-    <div class="speech-bubble">
-      Extreme Power für spektakuläre Sprünge.
-    </div>
   </div>
 
-  <div class="gallery-item" onclick="toggleBubble(this)">
+  <div class="gallery-item">
     <img src="./images/arrma-fury-mega-550-2wd-1-10-green.jpg" onclick="openLightbox(this.src);">
-    <div class="speech-bubble">
-      Unser wendiger Fury für schnelle Trainingsrunden.
-    </div>
   </div>
 
-  <div class="gallery-item" onclick="toggleBubble(this)">
+  <div class="gallery-item">
     <img src="./images/TT01-Mercedes.jpg" onclick="openLightbox(this.src);">
-    <div class="speech-bubble">
-      Tamiya TT01 – ein Klassiker auf der Strecke.
-    </div>
   </div>
 
-  <div class="gallery-item" onclick="toggleBubble(this)">
+  <div class="gallery-item">
     <img src="./images/Tamiya-WildWilly.jpg" onclick="openLightbox(this.src);">
-    <div class="speech-bubble">
-      Wild Willy – perfekt für Offroad-Abenteuer.
-    </div>
   </div>
 
-  <div class="gallery-item" onclick="toggleBubble(this)">
+  <div class="gallery-item">
     <img src="./images/Traxxas-Rustler-4x4.jpg" onclick="openLightbox(this.src);">
-    <div class="speech-bubble">
-      Traxxas Rustler 4x4 – robust und extrem schnell.
-    </div>
   </div>
 
-  <div class="gallery-item" onclick="toggleBubble(this)">
+  <div class="gallery-item">
     <img src="./images/arrma-mojave.jpg" onclick="openLightbox(this.src);">
-    <div class="speech-bubble">
-      Arrma Mojave – ideal für Sand und Outdoor-Strecken.
-    </div>
   </div>
-
 </div>
-
-
 
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <img id="lightboxImg">
@@ -375,20 +298,11 @@ nav{
 <audio id="engineSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_4b4f06c42f.mp3?filename=engine-start-10031.mp3"></audio>
 
 <script>
-// Dark Mode
+
 function toggleDarkMode(){
   document.body.classList.toggle("dark");
 }
 
-// Speech Bubbles
-function toggleBubble(el){
-  document.querySelectorAll('.gallery-item').forEach(i=>{
-    if(i!==el) i.classList.remove("active");
-  });
-  el.classList.toggle("active");
-}
-
-// Lightbox
 function openLightbox(src){
   document.getElementById("lightboxImg").src=src;
   document.getElementById("lightbox").style.display="flex";
@@ -397,7 +311,6 @@ function closeLightbox(){
   document.getElementById("lightbox").style.display="none";
 }
 
-// GitHub Last Update
 fetch(`https://api.github.com/repos/Dirk65536/MC-Dortmund3/commits?path=index.html&page=1&per_page=1`)
 .then(r=>r.json())
 .then(d=>{
@@ -408,7 +321,6 @@ fetch(`https://api.github.com/repos/Dirk65536/MC-Dortmund3/commits?path=index.ht
   }
 });
 
-// Racing Sound on first click
 let soundPlayed=false;
 document.body.addEventListener("click",function(){
   if(!soundPlayed){
@@ -417,24 +329,6 @@ document.body.addEventListener("click",function(){
   }
 });
 
-// Dust Particles on Scroll
-window.addEventListener("scroll",()=>{
-  for(let i=0;i<5;i++){
-    createParticle();
-  }
-});
-
-function createParticle(){
-  const p=document.createElement("div");
-  p.className="particle";
-  p.style.left=Math.random()*window.innerWidth+"px";
-  p.style.top=window.innerHeight-20+"px";
-  document.body.appendChild(p);
-
-  setTimeout(()=>{p.remove();},1200);
-}
-
-// Countdown bis 13.02.2026 18:00
 const nextEvent=new Date("2026-02-13T18:00:00");
 function updateCountdown(){
   const now=new Date();
