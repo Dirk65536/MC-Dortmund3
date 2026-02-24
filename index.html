@@ -352,12 +352,28 @@ function updateCountdown(){
     return;
   }
 
-  const now = new Date();
-  const diff = nextEvent - now;
+  const today = new Date();
+  
+  // Nur Datum, keine Uhrzeit!
+  const todayMidnight = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  const eventMidnight = new Date(nextEvent.getFullYear(), nextEvent.getMonth(), nextEvent.getDate());
 
-  const days = Math.floor(diff/(1000*60*60*24));
+  const diff = eventMidnight - todayMidnight;
 
+  const days = Math.round(diff / (1000 * 60 * 60 * 24));
+
+  if(days === 0)
+  {
+    el.innerText = "🏁 Nächstes Event ist heute!";
+  }
+  else if(days === 1)
+  {
+    el.innerText = "🏁 Nächstes Event ist morgen!";
+  }
+  else
+  {
   el.innerText = `🏁 Nächstes Event in ${days} Tagen`;
+  }
 }
 
 setInterval(updateCountdown,1000);
@@ -367,3 +383,4 @@ updateCountdown();
 
 </div></body>
 </html>
+
